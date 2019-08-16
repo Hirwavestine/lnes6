@@ -1,9 +1,4 @@
-let o = {
-  carId: 123,
-  getId: function() {
-    return this.carId;
-  }
+let getId = (prefix, suffix) => {
+  return prefix + 123 + suffix;
 };
-let newCar = { carId: 456 };
-let newFn = o.getId.bind(newCar);
-console.log(newCar);
+console.log(getId("ID: ", "!"));
