@@ -3,6 +3,6 @@ let carIds = [
   { carId: 456, style: "convertible" },
   { carId: 789, style: "sedan" }
 ];
-let result = carIds.every(car => car.carId > 0);
+let result = carIds.find(car => car.carId > 500);
 console.log(result);
-//true
+// { carId: 789, style: "sedan" }
