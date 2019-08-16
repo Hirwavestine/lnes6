@@ -1,3 +1,10 @@
-//convert array to JSON
-let carIds = [{ carId: 123 }, { carId: 456 }, { carId: 7890 }, { carId: 1123 }];
-console.log(JSON.stringify(carIds));
+//parsing JSON
+let jsonIn = `
+[
+  {"carId" : 123},
+  {"carId" : 456},
+  {"carId" : 012}
+]
+`;
+let carIds = JSON.parse(jsonIn);
+console.log(carIds);
