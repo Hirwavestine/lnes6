@@ -3,6 +3,5 @@ let carIds = [
   { carId: 456, style: "convertible" },
   { carId: 789, style: "sedan" }
 ];
-let result = carIds.find(car => car.carId > 500);
-console.log(result);
-// { carId: 789, style: "sedan" }
+carIds.forEach(car => console.log(car));
+carIds.forEach((car, index) => console.log(car, index));
