@@ -1,8 +1,8 @@
 let o = {
-  cardId: 123,
+  carId: 123,
   getId: function() {
-    console.log(this); //{cardId:123,getId: [function:getId]}
-    return this.cardId;
+    return this.carId;
   }
 };
-console.log(o.getId()); //123
+let newCar = { carId: 456 };
+console.log(o.getId.call(newCar)); //123
