@@ -1,10 +1,6 @@
-function Car(id) {
-  this.carId = id;
-}
-Car.prototype.start = function() {
-  console.log("start:" + this.carId);
+String.prototype.hello = function() {
+  return this.toString() + " Hello";
 };
 
-let car = new Car(123);
-car.start();
-//start: 123
+console.log("foo".hello());
+//foo Hello
