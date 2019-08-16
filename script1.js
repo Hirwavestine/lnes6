@@ -1,10 +1,7 @@
-let app = (function() {
-  let name = "Hirwa Vestine";
-  let getName = function() {
-    return name;
-  };
-  return {
-    getName: getName
-  };
-})();
-console.log(app.getName());
+let o = {
+  cardId: 123,
+  getId: function() {
+    return this.cardId;
+  }
+};
+console.log(o.getId()); //123
