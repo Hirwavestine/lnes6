@@ -1,8 +1,10 @@
-let trackCar = function(cardId, city = "NY") {
-  console.log(`Tracking ${cardId} in ${city}.`);
-};
+function Car(id) {
+  this.carId = id;
+  this.start = function() {
+    console.log("start:" + this.carId);
+  };
+}
 
-console.log(trackCar(123));
-//Tracking 123.
-console.log(trackCar(123, "Chicago"));
-//Tracking 123 in Chicago.
+let car = new Car(123);
+car.start();
+//start: 123
