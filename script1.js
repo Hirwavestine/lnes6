@@ -1,3 +1,3 @@
-let getId = (prefix, suffix) => prefix + 123 + suffix;
+let getId = _ => 123;
 
-console.log(getId("ID: ", "!"));
+console.log(getId());
