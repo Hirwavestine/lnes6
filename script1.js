@@ -1,10 +1,8 @@
-//parsing JSON
-let jsonIn = `
-[
-  {"carId" : 123},
-  {"carId" : 456},
-  {"carId" : 012}
-]
-`;
-let carIds = JSON.parse(jsonIn);
-console.log(carIds);
+let carIds = [
+  { carId: 123, style: "sedan" },
+  { carId: 456, style: "convertible" },
+  { carId: 789, style: "sedan" }
+];
+let result = carIds.every(car => car.carId > 0);
+console.log(result);
+//true
