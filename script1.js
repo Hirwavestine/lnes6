@@ -1,7 +1,8 @@
 //convert to JSON
-let car = {
-  id: 123,
-  style: "convertible"
+let house = {
+  name: "etage",
+  plotNumber: "18969",
+  location: "Kigali-Kicukiro"
 };
-console.log(JSON.stringify(car));
-//{"id":123, "style":"convertible"}
+console.log(JSON.stringify(house));
+//{"name":"etage", "plotNumber":18969,"location":"Kigali-Kicukiro"}
