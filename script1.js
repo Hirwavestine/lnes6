@@ -5,4 +5,5 @@ let o = {
   }
 };
 let newCar = { carId: 456 };
-console.log(o.getId.call(newCar)); //123
+let newFn = o.getId.bind(newCar);
+console.log(newCar);
