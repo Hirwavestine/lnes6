@@ -1,6 +1,7 @@
-String.prototype.hello = function() {
-  return this.toString() + " Hello";
+//convert to JSON
+let car = {
+  id: 123,
+  style: "convertible"
 };
-
-console.log("foo".hello());
-//foo Hello
+console.log(JSON.stringify(car));
+//{"id":123, "style":"convertible"}
