@@ -1,8 +1,3 @@
-//convert to JSON
-let house = {
-  name: "etage",
-  plotNumber: "18969",
-  location: "Kigali-Kicukiro"
-};
-console.log(JSON.stringify(house));
-//{"name":"etage", "plotNumber":18969,"location":"Kigali-Kicukiro"}
+//convert array to JSON
+let carIds = [{ carId: 123 }, { carId: 456 }, { carId: 7890 }, { carId: 1123 }];
+console.log(JSON.stringify(carIds));
