@@ -1,4 +1,5 @@
-import { Car } from "./models/car";
-
-let car = new Car(123);
-console.log(car.id);
+let intervalId = setInterval(function() {
+  console.log("1 second passed");
+}, 1000);
+//if you need to cancel
+clearInterval(intervalId);
