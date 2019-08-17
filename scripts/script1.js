@@ -1,5 +1,4 @@
-//Modify the DOM
-
-let element = document.getElementById("first");
-element.classList.add("p2");
-console.log(element);
+let promise = new Promise(function(resolve, reject) {
+  setTimeout(resolve, 100, "someValue");
+});
+console.log(promise);
