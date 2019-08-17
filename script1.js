@@ -1,8 +1,12 @@
 class Person {
-  constructor(names) {
+  constructor(names, location) {
     this.names = names;
+    this.location = location;
+  }
+  identify() {
+    return `Person Details: ${this.names} located at ${this.location}`;
   }
 }
-let person = new Person("Shimwa Ian");
+let person = new Person("Shimwa Ian", "Kigali-Rwanda");
 
-console.log(person.names);
+console.log(person.identify());
