@@ -1,8 +1,0 @@
-class Car {
-  constructor(id) {
-    this.id = id;
-  }
-}
-let car = new Car(123);
-car.id = 456;
-console.log(car.id);
