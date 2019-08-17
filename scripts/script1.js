@@ -1,5 +1,5 @@
 //Modify the DOM
 
 let element = document.getElementById("first");
-element.setAttribute("foo", "fooValue");
+element.classList.add("p2");
 console.log(element);
