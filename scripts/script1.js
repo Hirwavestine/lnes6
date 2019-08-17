@@ -4,6 +4,6 @@ try {
   //catch the error in the code, this only execute if an error is throw in our code block
 } catch (error) {
   console.log("error:", error);
+} finally {
+  console.log("continuing");
 }
-//the code will continue to execute after catching the errors
-console.log("continuing");
