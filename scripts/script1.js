@@ -1,4 +1,5 @@
-import { Car } from "./models/car";
+//Modify the DOM
 
-let car = new Car(123);
-console.log(car.id);
+let element = document.getElementById("first");
+element.classList.add("p2");
+console.log(element);
