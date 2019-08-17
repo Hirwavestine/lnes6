@@ -1,8 +1,8 @@
-class Car {
-  constructor(id) {
-    this.id = id;
+class Person {
+  constructor(names) {
+    this.names = names;
   }
 }
-let car = new Car(123);
-car.id = 456;
-console.log(car.id);
+let person = new Person("Shimwa Ian");
+
+console.log(person.names);
