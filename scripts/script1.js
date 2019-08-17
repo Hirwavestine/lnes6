@@ -1,2 +1,7 @@
-let els = document.getElementsByTagName("p1");
-console.log(els[0]);
+//Modify the DOM
+
+let element = document.getElementById("elementId");
+element.textContent = "new Text";
+element.setAttribute("name", "namevalue");
+element.classList.add("myClassName");
+element.style.color = "blue";
