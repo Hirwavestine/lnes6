@@ -1,8 +1,5 @@
-let xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    console.log(this.responseText);
-  }
-};
-xhttp.open("GET", "http://myid.mockapi.io/api/v1/users", true);
-xhttp.send();
+import $ from "jquery";
+
+$.get("http://myid.mockapi.io/api/v1/users", data =>
+  console.log("dsta: ", data)
+);
