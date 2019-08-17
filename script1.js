@@ -1,10 +1,8 @@
-let app = (function() {
-  let name = "Hirwa Vestine";
-  let getName = function() {
-    return name;
-  };
-  return {
-    getName: getName
-  };
-})();
-console.log(app.getName());
+class Car {
+  constructor(id) {
+    this.id = id;
+  }
+}
+let car = new Car(123);
+car.id = 456;
+console.log(car.id);
