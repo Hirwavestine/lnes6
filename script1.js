@@ -1,14 +1,17 @@
-class Person {
-  constructor(names, location) {
-    this.names = names;
-    this.location = location;
+class Vehicle{
+  constructor(){
+    this.type='car';
   }
-  identify(suffix) {
-    return `Person Details: ${this.names} located at ${
-      this.location
-    } ${suffix}`;
+  start(){
+    return `
+    Starting: ${this.type}`;
   }
 }
-let person = new Person("Shimwa Ian", "Kigali-Rwanda");
 
-console.log(person.identify("!!!"));
+class Car extends Vehicle{
+    start(){
+      return 'In Car start' +super.start();
+    }
+}
+let car =new Car();
+console.log(car.start());
