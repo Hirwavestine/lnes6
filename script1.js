@@ -1,7 +1,8 @@
-let carIds = [
-  { carId: 123, style: "sedan" },
-  { carId: 456, style: "convertible" },
-  { carId: 789, style: "sedan" }
-];
-carIds.forEach(car => console.log(car));
-carIds.forEach((car, index) => console.log(car, index));
+class Car {
+  constructor(id) {
+    this.id = id;
+  }
+}
+let car = new Car(123);
+car.id = 456;
+console.log(car.id);
