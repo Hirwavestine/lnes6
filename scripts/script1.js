@@ -1,4 +1,5 @@
 //Modify the DOM
 
 let element = document.getElementById("first");
-element.textContent = "New Content";
+element.setAttribute("foo", "fooValue");
+console.log(element);
