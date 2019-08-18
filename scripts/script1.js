@@ -1,4 +1,7 @@
-let promise = new Promise(function(resolve, reject) {
-  setTimeout(resolve, 100, "someValue");
+//The submit event
+
+let form = document.getElementById("user-form");
+form.addEventListener("submit", event => {
+  //prevent the browser from submitting the form
+  event.preventDefault();
 });
-console.log(promise);
