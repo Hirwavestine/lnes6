@@ -1,11 +1,12 @@
-//The submit event
-
 let form = document.getElementById("user-form");
 form.addEventListener("submit", event => {
-  //form.elements[] event handle
   let user = form.elements["user"];
-  let avatarFile = form.elements["avatar-file"];
-  console.log(user.value, avatarFile.value);
-  //prevent the browser from submitting the form
+  let userError = document.getElementById("user-error");
+
+  userError.textContent = "Invalid entry";
+  userError.style.color = "red";
+  userError.style.borderColor = "red";
+  user.focus();
+
   event.preventDefault();
 });
