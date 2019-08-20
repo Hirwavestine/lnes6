@@ -1,21 +1,19 @@
-import $ from "jquery";
+'use strict';
 
-let form = document.getElementById("user-form");
-
-form.addEventListener("submit", event => {
-  let user = form.elements["user"];
-  let avatarFile = form.elements["avatar-file"];
-
-  let posting = {
-    user: user.value,
-    avatarFile: avatarFile.value
-  };
-
-  let promise = $.post("http://---/api/v1/users", posting);
-  promise.then(
-    data => console.log("success: ", data),
-    error => console.log("error: ", error)
-  );
-
-  event.preventDefault();
-});
+var cat=Object.create(Object.prototype,
+{
+  name:{
+    value:'fff',
+    writable:true,
+    enumerable:true,
+    configurable:true
+  },
+    color:{
+      value:'black',
+      writable:true,
+      enumerable:true,
+      configurable:true
+    }
+  
+})
+display(cat)
