@@ -5,10 +5,21 @@ var cat = {
   color: "white"
 };
 //using the writable attribute
-Object.defineProperty(cat, "name", { writable: false });
-//use this to make an object which has an other object unchanged
-Object.freeze(cat.name);
-//this can not throw an error because you set a name property to an object
-
-cat.name.first = "crack";
-display(Object.getOwnPropertyDescriptor(cat, "name"));
+Object.defineProperty(cat, "fullName", {
+  get: function() {
+    return this.name.first + " " + this.name.last;
+  },
+  set: function(value) {
+    var nameParts = value.split(" ");
+    this.name.first = nameParts[0];
+    this.name.last = nameParts[1];
+  }
+});
+cat.fullName = "Muffin Top";
+display(cat.fullName);
+display(cat.name.first);
+display(cat.name.last);
+//Output
+//Muffin Top
+//Muffin
+//Top
