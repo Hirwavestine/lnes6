@@ -1,19 +1,8 @@
-'use strict';
+"use strict";
 
-var cat=Object.create(Object.prototype,
-{
-  name:{
-    value:'fff',
-    writable:true,
-    enumerable:true,
-    configurable:true
-  },
-    color:{
-      value:'black',
-      writable:true,
-      enumerable:true,
-      configurable:true
-    }
-  
-})
-display(cat)
+var cat = {
+  name: "fluffy",
+  color: "white"
+};
+cat["Eye color"] = "green";
+display(cat["Eye color"]);
