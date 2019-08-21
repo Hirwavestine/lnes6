@@ -11,7 +11,7 @@ var muffin = new Cat("Muffin", "Brown");
 display(fluffy.age);
 display(fluffy.__proto__.age);
 display(Object.keys(fluffy));
-display(fluffy.hasOwnProperty("age"));
+display(fluffy.hasOwnProperty("color"));
 /*
 4
 4
@@ -19,5 +19,5 @@ Array {
 0: name
 1: color
 }
-false
+true
 */
