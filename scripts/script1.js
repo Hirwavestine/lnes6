@@ -1,32 +1,23 @@
 "use strict";
 
-class Animal {
-  constructor(voice) {
-    this.voice = voice || "grunt";
-  }
-  speak() {
-    display(this.voice);
-  }
-}
+"use strict";
 
-class Cat extends Animal {
-  constructor(name, color) {
-    super("Meow");
-    this.name = name;
-    this.color = color;
-  }
+function Cat(name, color) {
+  this.name = name;
+  this.color = color;
 }
-
+Cat.prototype.age = 4;
 var fluffy = new Cat("Fluffy", "white");
-display(fluffy.constructor);
 
+display(fluffy.__proto__);
+display(fluffy.__proto__.__proto__);
+display(fluffy.__proto__.__proto__.__proto__);
 /*
-Output
-class Cat extends Animal {
- constructor(name, color) {
- super("Meow");
- this.name = name;
- this.color = color;
- }
- }
+Cat {
+age: 4
+}
+Object {
+}
+null
+
 */
