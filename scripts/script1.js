@@ -18,6 +18,15 @@ class Cat extends Animal {
 }
 
 var fluffy = new Cat("Fluffy", "white");
-display(fluffy);
-display(Object.keys(fluffy.__proto__.__proto__));
-display(fluffy.__proto__.__proto__.hasOwnProperty("speak"));
+display(fluffy.constructor);
+
+/*
+Output
+class Cat extends Animal {
+ constructor(name, color) {
+ super("Meow");
+ this.name = name;
+ this.color = color;
+ }
+ }
+*/
