@@ -4,20 +4,18 @@ function Cat(name, color) {
   this.name = name;
   this.color = color;
 }
-Cat.prototype.age = 4;
 var fluffy = new Cat("Fluffy", "white");
-var muffin = new Cat("Muffin", "Brown");
-
-display(fluffy.age);
-display(fluffy.__proto__.age);
-display(Object.keys(fluffy));
-display(fluffy.hasOwnProperty("color"));
+//an object has a proto but a function has a prototype
+//A function's prototype:is the object instance that will become the prototype for all objects created using this function as a constructor.
+//An object's prototype:is the object instance from which the object is inherited.
+display(Cat.prototype);
+display(fluffy.__proto__);
+display(Cat.prototype === fluffy.__proto__);
 /*
-4
-4
-Array {
-0: name
-1: color
+Cat {
+}
+Cat {
 }
 true
+
 */
