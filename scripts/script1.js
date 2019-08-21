@@ -1,7 +1,31 @@
-//The submit event
+"use strict";
 
-let form = document.getElementById("user-form");
-form.addEventListener("submit", event => {
-  //prevent the browser from submitting the form
-  event.preventDefault();
-});
+class Animal {
+  constructor(voice) {
+    this.voice = voice || "grunt";
+  }
+  speak() {
+    display(this.voice);
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, color) {
+    super("Meow");
+    this.name = name;
+    this.color = color;
+  }
+}
+
+var fluffy = new Cat("Fluffy", "white");
+display(fluffy.constructor);
+/*
+Output
+class Cat extends Animal {
+ constructor(name, color) {
+ super("Meow");
+ this.name = name;
+ this.color = color;
+ }
+ }
+*/
