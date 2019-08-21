@@ -7,16 +7,15 @@ function Cat(name, color) {
 Cat.prototype.age = 4;
 var fluffy = new Cat("Fluffy", "white");
 var muffin = new Cat("Muffin", "Brown");
-//changing a function's prototype
-Cat.prototype = { age: 5 };
-var snowbell = new Cat("snowbell", "white");
+
 display(fluffy.age);
-display(muffin.age);
-display(snowbell.age);
-display(Cat.prototype.age);
-/* 
+display(fluffy.__proto__.age);
+display(Object.keys(fluffy));
+/*
 4
 4
-5
-5
+Array {
+0: name
+1: color
+}
 */
