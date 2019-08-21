@@ -1,25 +1,31 @@
 "use strict";
 
-var cat = {
-  name: { first: "fluffy", last: "laBeouf" },
-  color: "white"
-};
-//using the writable attribute
-Object.defineProperty(cat, "fullName", {
-  get: function() {
-    return this.name.first + " " + this.name.last;
-  },
-  set: function(value) {
-    var nameParts = value.split(" ");
-    this.name.first = nameParts[0];
-    this.name.last = nameParts[1];
+class Animal {
+  constructor(voice) {
+    this.voice = voice || "grunt";
   }
-});
-cat.fullName = "Muffin Top";
-display(cat.fullName);
-display(cat.name.first);
-display(cat.name.last);
-//Output
-//Muffin Top
-//Muffin
-//Top
+  speak() {
+    display(this.voice);
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, color) {
+    super("Meow");
+    this.name = name;
+    this.color = color;
+  }
+}
+
+var fluffy = new Cat("Fluffy", "white");
+display(fluffy.constructor);
+/*
+Output
+class Cat extends Animal {
+ constructor(name, color) {
+ super("Meow");
+ this.name = name;
+ this.color = color;
+ }
+ }
+*/
